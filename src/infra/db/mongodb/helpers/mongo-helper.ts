@@ -27,7 +27,7 @@ export const MongoHelper = {
   },
 
   map (account: any): any {
-    const { _id, ...accountWithoutId } = account
-    return Object.assign({}, accountWithoutId, { id: String(_id) })
+    const { id, ...accountWithoutId } = account
+    return Object.assign({}, accountWithoutId, { id })
   }
 }
